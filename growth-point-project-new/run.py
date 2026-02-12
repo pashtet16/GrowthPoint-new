@@ -209,7 +209,7 @@ def upload_image():
         original_filename = secure_filename(file.filename)
         new_filename = generate_filename(original_filename)
 
-        file_path = os.path.join(app.config['UPLOAD_FOLDER'], new_filename)
+        file_path = os.path.join(app.config['EVENT_FOLDER'], new_filename)
         file.save(file_path)
 
         return {
